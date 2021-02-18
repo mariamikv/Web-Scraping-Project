@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+   <h2 style="text-align: center;"> {{ search | title }}</h2>
+
+   <div class="row">
+       {% for posting in final_postings %}
+            <div class="col s4" >
+                <div class="card" style="height:500px; background-color:#E7EAEC ;">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <a href="{{ posting.1 }}"><img src="{{ posting.3 }}" alt="img" style="height: 300px;"></a>
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title activator grey-text text-darken-4"> <a href="{{ posting.1 }}" style="color:black;"><p>{{ posting.0 }}</p></a><i class="material-icons right">more_vert</i></span>
+                      <a href="{{ posting.1 }}"><p>{{ posting.2 }}</p></a>
+                    </div>
+                    <div class="card-reveal">
+                      <span class="card-title grey-text text-darken-4"><p>{{ posting.0 }}</p><i class="material-icons right">close</i></span>
+                      <a href="{{ posting.1 }}">View listing: price {{ posting.2 }}</a>
+                    </div>
+                  </div>
+            </div>   
+        {% endfor %}
+   </div>
+
+{% endblock content %}
