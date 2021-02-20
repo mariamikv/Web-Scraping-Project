@@ -4,7 +4,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Clone of Craiglist</title>
+        <title>Craiglist Clone</title>
         <link rel="icon" type="icon/svg" href="/static/css/icon.svg">
         <meta name = "viewport" content = "width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -20,19 +20,16 @@
         <nav id="nav">
             <div class="topnav" id="myTopnav">
                 <a href="{% url 'home' %}" >Web Scraping Clone</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                  <i class="fa fa-bars"></i>
-                </a>
             </div>
         </nav>
         <div class="container">
-            <h1 style="text-align: center;">what do you want to search for on Web Scraping Clone?</h1>
+            <h1 style="text-align: center;">what do you want to search on Web Scraping Clone?</h1>
             <div class="row">
                 
                 <div class="col s4 center">
                     <i class="large material-icons" style="color:#0E143D ;">accessibility</i>
                     <p>fast web scrapper</p>
-                    <p class="light">You can access every information around the Craiglist</p>
+                    <p class="light">You can access every information around the Craiglist Clone</p>
                 </div>
 
                  <div class="col s4 center">
@@ -61,16 +58,6 @@
             {% endblock content %}
         </div>
          <!-- Compiled and minified JavaScript -->
-         <script>
-            function myFunction() {
-              var x = document.getElementById("myTopnav");
-              if (x.className === "topnav") {
-                x.className += " responsive";
-              } else {
-                x.className = "topnav";
-              }
-            }
-            </script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
 </html>
